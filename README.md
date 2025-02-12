@@ -11,7 +11,7 @@ O questionário é uma ferramenta útil para pesquisadores, profissionais da sa�
 
 O questionário está hospedado no GitHub Pages e pode ser acessado através do link abaixo:
 
-🔗 **[Acessar Questionário](https://seu-usuario.github.io/questionario-pgdp/)**
+🔗 **[Acessar Questionário](https://moranderson.github.io/questionario-pgd/)**
 
 ---
 
