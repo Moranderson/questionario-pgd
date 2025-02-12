@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário: Planos de Gestão de Dados na Saúde</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+            max-width: 600px;
+            margin: auto;
+        }
+        h2, p {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Questionário sobre Planos de Gestão de Dados na Saúde</h2>
+        <p>Responda às perguntas abaixo para contribuir com nossa pesquisa.</p>
+
+        <form action="submit.php" method="POST">
+
+            <div class="question">
+                <label>1️⃣ Nome (opcional):</label><br>
+                <input type="text" name="nome" style="width: 100%; padding: 5px;">
+            </div>
+
+            <div class="question">
+                <label>2️⃣ Instituição:</label><br>
+                <input type="text" name="instituicao" style="width: 100%; padding: 5px;">
+            </div>
+
+            <div class="question">
+                <label>3️⃣ País:</label><br>
+                <select name="pais" style="width: 100%; padding: 5px;">
+                    <option>Brasil</option>
+                    <option>Portugal</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>4️⃣ Área de atuação:</label><br>
+                <select name="atuacao" style="width: 100%; padding: 5px;">
+                    <option>Pesquisa acadêmica</option>
+                    <option>Gestão de dados</option>
+                    <option>Saúde pública</option>
+                    <option>Tecnologia da Informação</option>
+                    <option>Biblioteconomia e Ciência da Informação</option>
+                    <option>Outra</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>5️⃣ Você já teve experiência com Planos de Gestão de Dados?</label><br>
+                <input type="radio" name="experiencia" value="Elaborei um PGD"> Sim, já elaborei um PGD<br>
+                <input type="radio" name="experiencia" value="Utilizei um PGD"> Sim, já utilizei um PGD criado por outra equipe<br>
+                <input type="radio" name="experiencia" value="Conheço o conceito"> Não, mas conheço o conceito<br>
+                <input type="radio" name="experiencia" value="Não conheço"> Não, nunca tive contato com PGDs
+            </div>
+
+            <div class="question">
+                <label>6️⃣ Quais os principais benefícios que você percebe na adoção de um PGD?</label><br>
+                <input type="checkbox" name="beneficios[]" value="Maior transparência"> Maior transparência na pesquisa<br>
+                <input type="checkbox" name="beneficios[]" value="Facilidade de compartilhamento"> Facilidade de compartilhamento de dados<br>
+                <input type="checkbox" name="beneficios[]" value="Melhor preservação"> Melhor preservação e reuso dos dados<br>
+                <input type="checkbox" name="beneficios[]" value="Maior reconhecimento"> Maior reconhecimento da pesquisa<br>
+                <input type="checkbox" name="beneficios[]" value="Exigências de financiadores"> Atendimento a exigências de agências financiadoras
+            </div>
+
+            <div class="question">
+                <label>7️⃣ Você já ouviu falar sobre os princípios FAIR?</label><br>
+                <input type="radio" name="fair" value="Avançado"> Sim, tenho conhecimento avançado sobre o tema<br>
+                <input type="radio" name="fair" value="Básico"> Sim, tenho conhecimento básico<br>
+                <input type="radio" name="fair" value="Não"> Não, nunca ouvi falar
+            </div>
+
+            <div class="question">
+                <label>8️⃣ A sua instituição adota diretrizes para tornar os dados FAIR?</label><br>
+                <input type="radio" name="diretrizes_fair" value="Sim, bem estabelecidas"> Sim, temos diretrizes bem estabelecidas<br>
+                <input type="radio" name="diretrizes_fair" value="Pouco aplicadas"> Sim, mas poucas pessoas seguem essas diretrizes<br>
+                <input type="radio" name="diretrizes_fair" value="Não existem"> Não há diretrizes específicas<br>
+                <input type="radio" name="diretrizes_fair" value="Não sei informar"> Não sei informar
+            </div>
+
+            <div class="question">
+                <label>9️⃣ Quais são os maiores desafios para compartilhar dados de pesquisa?</label><br>
+                <input type="checkbox" name="desafios[]" value="Questões éticas"> Questões éticas e sigilo dos dados<br>
+                <input type="checkbox" name="desafios[]" value="Falta de tempo"> Falta de tempo para organizar e documentar os dados<br>
+                <input type="checkbox" name="desafios[]" value="Infraestrutura limitada"> Falta de infraestrutura para armazenar e compartilhar os dados<br>
+                <input type="checkbox" name="desafios[]" value="Direitos autorais"> Incerteza sobre direitos autorais e licenciamento dos dados
+            </div>
+
+            <div class="question">
+                <label>🔟 Quais ações poderiam facilitar a adoção de PGDs na área da saúde?</label><br>
+                <textarea name="acoes" style="width: 100%; height: 80px;"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Enviar Respostas</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
